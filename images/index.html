@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyPortfolioSatyamPaswan</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* Success/Error message styling */
+        #msg {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="logo.png" width="180px" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>UI/UX Designer</p>
+                <h1>Hi, I'm <span>Satyam</span><br> Paswan from Delhi</h1>
+            </div>
+        </div>
+    </div>
+
+    <!-- About -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="about.png" width="400px">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>
+                        Hi, I’m Satyam Paswan, a passionate designer specializing in graphic design, 
+                        video editing, and UI/UX design. I have hands-on experience with a wide range 
+                        of design tools, enabling me to create visually appealing graphics, dynamic 
+                        videos, and intuitive digital experiences. I love turning ideas into engaging 
+                        visuals and seamless interfaces that leave a lasting impact.
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab(event,'skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab(event,'experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab(event,'education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span> - Designing Web/App interfaces</li>
+                            <li><span>Web Development</span></li>
+                            <li><span>Video Editing</span></li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2025-current</span> - UI/UX Design training at Akgec</li>
+                            <li><span>Team lead</span> - Rentloop at college</li>
+                            <li>Project Explorer</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>B.Tech Student</span></li>
+                            <li><span>IT Department</span></li>
+                            <li>2024-2028</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Services -->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code fa-lg"></i>
+                    <h2>Web Design</h2>
+                    <p>Modern, attractive, and user-friendly websites 
+                       with responsive layouts and smooth navigation.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-crop-simple fa-lg"></i>
+                    <h2>UI/UX</h2>
+                    <p>Crafting seamless, engaging, and user-friendly 
+                       digital experiences with intuitive interfaces.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-tablet-screen-button fa-lg"></i>
+                    <h2>App Design</h2>
+                    <p>Modern, intuitive mobile apps with clean 
+                       interfaces and smooth navigation.</p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Portfolio -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="phone.jpeg">
+                    <div class="layer">
+                        <h3>Graphics Design & Video Edits</h3>
+                        <p>I create designs and videos focusing on creativity,
+                           smooth layouts, and polished storytelling.</p>
+                        <a href="#"><i class="fa-solid fa-link fa-lg"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="laptoponly.jpeg">
+                    <div class="layer">
+                        <h3>Rentloop Website</h3>
+                        <p>A student-to-student rental platform making borrowing 
+                           and lending items easier on campus.</p>
+                        <a href="#"><i class="fa-solid fa-link fa-lg"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="phoneface.jpeg">
+                    <div class="layer">
+                        <h3>Social Media</h3>
+                        <p>Connect with me for updates on projects, designs, 
+                           and creative work.</p>
+                        <a href="#"><i class="fa-solid fa-link fa-lg"></i></a>
+                    </div>
+                </div>
+                <a href="#" class="btn">See more</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i> imsattu8601@gmail.com</p>
+                    <p><i class="fa-solid fa-phone-volume"></i> 8840057494</p>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/mrsattu.02/"><i class="fa-brands fa-square-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+                        <a href="#"><i class="fa-solid fa-envelope"></i></a>
+                        <a href="https://www.linkedin.com/in/satyam-paswan-006a032bb/"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                    <a href="Satyam_Paswan_Resume.pdf" class="btn btn2" download>Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="copyright">
+        <p>Copyright <i class="fa-regular fa-copyright"></i> Satyam. 
+           <i class="fa-solid fa-heart"></i></p>
+    </div>
+
+    <!-- JS -->
+    <script>
+        // Tab functionality
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(event, tabname) {
+            for (let tablink of tablinks) tablink.classList.remove("active-link");
+            for (let tabcontent of tabcontents) tabcontent.classList.remove("active-tab");
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+        // Menu functionality
+        var sidemenu = document.getElementById("sidemenu");
+        function openmenu() { sidemenu.style.right = "0"; }
+        function closemenu() { sidemenu.style.right = "-200px"; }
+    </script>
+
+    <!-- Google Sheet Form JS -->
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycby9QCBH04QspaJT3wZEc5tMhbiXpadnPJlOXBJOhAELcsw7-OjqoZJg4Iqta6_gWnpL/exec';
+        const form = document.forms['submit-to-google-sheet'];
+        const msg = document.getElementById("msg");
+
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML = "Message sent successfully ✅";
+                msg.style.color = "#61b752";
+                msg.style.opacity = "1";
+                form.reset();
+                setTimeout(() => {
+                    msg.style.opacity = "0"; // fade out
+                    msg.innerHTML = "";
+                }, 5000);
+            })
+            .catch(error => {
+                msg.innerHTML = "Something went wrong ❌";
+                msg.style.color = "red";
+                msg.style.opacity = "1";
+                setTimeout(() => {
+                    msg.style.opacity = "0";
+                    msg.innerHTML = "";
+                }, 5000);
+            });
+        });
+    </script>
+</body>
+</html>
